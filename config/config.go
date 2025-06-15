@@ -10,6 +10,7 @@ import (
 type Config struct {
 	Web3ProviderURL     string
 	FromAddress         string
+	ToAddress           string
 	PrivateKey          string
 	ChainID             int64
 	GasLimit            uint64
@@ -40,6 +41,7 @@ func LoadConfig() (*Config, error) {
 	return &Config{
 		Web3ProviderURL:     os.Getenv("WEB3_PROVIDER_URL"),
 		FromAddress:         os.Getenv("FROM_ADDRESS"),
+		ToAddress:           os.Getenv("TO_ADDRESS"),
 		PrivateKey:          os.Getenv("PRIVATE_KEY"),
 		ChainID:             chainID,
 		GasLimit:            gasLimit,

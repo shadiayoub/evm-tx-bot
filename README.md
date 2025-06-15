@@ -27,7 +27,8 @@ cp env.example .env
 Edit the `.env` file with your specific values:
 
 - `WEB3_PROVIDER_URL`: Your blockchain node URL
-- `FROM_ADDRESS`: Your wallet address
+- `FROM_ADDRESS`: Your wallet address (sender)
+- `TO_ADDRESS`: Recipient wallet address
 - `PRIVATE_KEY`: Your wallet's private key
 - `CHAIN_ID`: Network chain ID
 - `GAS_LIMIT`: Maximum gas per transaction
