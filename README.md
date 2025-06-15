@@ -49,6 +49,8 @@ go build
 
 ## Running
 
+### Direct Run
+
 ```bash
 ./tx-bot
 ```
@@ -56,6 +58,44 @@ go build
 The bot will start sending transactions with random amounts between the configured minimum and maximum values, with random sleep times between transactions.
 
 To stop the bot, press Ctrl+C for graceful shutdown.
+
+### Running in Screen Session (Recommended)
+
+For long-term running and easy monitoring, it's recommended to run the bot in a screen session:
+
+1. Create a new named screen session:
+```bash
+screen -S tx-bot
+```
+
+2. Run the bot inside the screen session:
+```bash
+./tx-bot
+```
+
+3. Detach from the screen session (keep the bot running):
+- Press `Ctrl+A` followed by `D`
+
+4. Reattach to the screen session later:
+```bash
+screen -r tx-bot
+```
+
+5. List all screen sessions:
+```bash
+screen -ls
+```
+
+6. Kill the screen session (if needed):
+```bash
+screen -X -S tx-bot quit
+```
+
+Using screen allows you to:
+- Keep the bot running even if your SSH connection drops
+- Monitor the bot's logs and status
+- Easily restart or stop the bot when needed
+- Run multiple instances with different names
 
 ## Security Notes
 
